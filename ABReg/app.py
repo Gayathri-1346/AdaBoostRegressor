@@ -51,16 +51,18 @@ st.title("🎵 Spotify Popularity Prediction")
 st.write("Predict Spotify Song Popularity using AdaBoost Regressor")
 
 # ---------------- LOAD DATA ----------------
+# ---------------- LOAD DATA ----------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DATA_PATH = os.path.join(
     BASE_DIR,
     "data",
     "SpotifyFeatures.csv"
-)")
+)
+
+st.write("Dataset Path:", DATA_PATH)
 
 df = pd.read_csv(DATA_PATH)
-
 # ---------------- DATA CLEANING ----------------
 df['explicit'] = df['explicit'].astype(int)
 
